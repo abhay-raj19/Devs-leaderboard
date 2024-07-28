@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils";
-import { Combobox } from "@/components/Combobox"; // Ensure this path is correct
+
+import SelectForm from "@/components/SelectForm";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,12 +20,10 @@ export default function Home() {
           Can you make it to the top of the leaderboard?
         </div>
         <div className="flex justify-center">
-          <div className="p-4">
-            <Combobox displayText="Select Repository" />
+          <div className="">
+            <SelectForm/>
           </div>
-          <div className="p-4">
-            <Combobox displayText="Category" />
-          </div>
+          
         </div>
       </div>
     </main>
